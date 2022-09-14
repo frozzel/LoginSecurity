@@ -17,14 +17,14 @@ console.log(LowCase)
 console.log(SymbolsCont)
 console.log(SetChar)
 
-////// ///////////////////////////////////Character Arrays/////////////////
+////// ///////////////////////////////////Character Arrays///////////////////////
 
 SymbolsArray =["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"]
 NumbArray =[0,1, 2, 3, 4, 5, 6, 7, 8, 9];
 UpArray =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 LowArray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-//////////////////////////////////////////////Funtion//////////////////
+//////////////////////////////////////////////Funtion////////////////////////////
 function CharLength(){
   PassLength = prompt('How long do you want your password? 8-128')
   if (PassLength < 7 || PassLength > 128) {
