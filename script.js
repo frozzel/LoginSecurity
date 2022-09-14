@@ -8,12 +8,14 @@ var Numbers
 var UpperCase
 var LowCase
 var SymbolsCont
+var SetChar= []
 
 console.log(PassLength)
 console.log(Numbers)
 console.log(UpperCase)
 console.log(LowCase)
 console.log(SymbolsCont)
+console.log(SetChar)
 
 ////// ///////////////////////////////////Character Arrays/////////////////
 
@@ -23,20 +25,41 @@ UpArray =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R
 LowArray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 //////////////////////////////////////////////Funtion//////////////////
-function generatePassword(){
+function CharLength(){
   PassLength = prompt('How long do you want your password? 8-128')
   if (PassLength < 7 || PassLength > 128) {
     alert('Please Insert a proper Length')
   }
   console.log(PassLength)
+}
+
+function Allinfo(){
   Numbers = confirm('Do you want to use numbers?')
-  console.log(Numbers)
-  UpperCase = confirm('Do you want to us Upper Case Letters?')
-  console.log(UpperCase)
-  LowCase = confirm('Do you want to use Lower Case Letters?')
-  console.log(LowCase)
-  SymbolsCont = confirm('Would you like to add symbols too? They Add more security!')
-  console.log(SymbolsCont)
+  if (Numbers){
+    var Numbers= SetChar
+
+  } else {
+
+  }
+  
+  console.log(SetChar)
+
+  } 
+//   if {
+//   UpperCase = confirm('Do you want to us Upper Case Letters?')
+//   console.log(UpperCase)
+//   LowCase = confirm('Do you want to use Lower Case Letters?')
+//   console.log(LowCase)
+//   SymbolsCont = confirm('Would you like to add symbols too? They Add more security!')
+//   console.log(SymbolsCont)
+// }
+//}
+
+function generatePassword(){
+  var PassLength= CharLength()
+  var SetChar= Allinfo()
+  console.log(PassLength)
+  console.log(SetChar)
 }
 
 
