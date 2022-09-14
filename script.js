@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 ///////////////////////////////////////////Global Varibles/////////////////
-var  generatePassword
+var generatePassword
 var PassLength
 var Numbers
 var UpperCase
@@ -34,17 +34,24 @@ function CharLength(){
 }
 
 function Allinfo(){
-  Numbers = confirm('Do you want to use numbers?')
-  if (Numbers){
-    var Numbers= SetChar
-
-  } else {
-
+  //Numbers = confirm('Do you want to use numbers?')
+  if (confirm('Do you want to use numbers?')){
+    Numbers=true;
+    SetChar= SetChar.concat(NumbArray)
+    console.log(SetChar)
+    console.log(Numbers)
+  } if (confirm('Do you want to us Upper Case Letters?')){
+    UpperCase=true;
+    SetChar=SetChar.concat(UpArray)
+    console.log(SetChar)
+    console.log(UpperCase)
   }
+  return
   
-  console.log(SetChar)
 
-  } 
+ } 
+
+ ///////////////////Add old needs added out of time :(  use new if else ^^^^^^^////////////////////
 //   if {
 //   UpperCase = confirm('Do you want to us Upper Case Letters?')
 //   console.log(UpperCase)
@@ -56,8 +63,10 @@ function Allinfo(){
 //}
 
 function generatePassword(){
-  var PassLength= CharLength()
-  var SetChar= Allinfo()
+  CharLength()
+  Allinfo()
+  CharLength= PassLength
+  Allinfo= SetChar
   console.log(PassLength)
   console.log(SetChar)
 }
