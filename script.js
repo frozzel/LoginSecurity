@@ -9,6 +9,7 @@ var UpperCase
 var LowCase
 var SymbolsCont
 var SetChar= []
+var genpass=[]
 
 console.log(PassLength)
 console.log(Numbers)
@@ -29,8 +30,11 @@ function CharLength(){
   PassLength = prompt('How long do you want your password? 8-128')
   if (PassLength < 7 || PassLength > 128) {
     alert('Please Insert a proper Length')
+    CharLength();
+  return false;
   }
   console.log(PassLength)
+  
 }
 
 function Allinfo(){
@@ -55,9 +59,7 @@ function Allinfo(){
     console.log(SetChar);
     console.log(SymbolsCont);
   }
-  // return
-  
-
+    RanDumb()
  } 
 
 function generatePassword(){
@@ -68,7 +70,14 @@ function generatePassword(){
   console.log(PassLength)
   console.log(SetChar)
 }
+////////////////////////////////////////Logic//////////////////////////////
 
+function RanDumb (){
+  for (var i =0; i < PassLength; i++){
+    genpass.push(SetChar[Math.floor(Math.random()*SetChar.length)])
+  }
+  console.log(genpass)
+}
 
 
 
