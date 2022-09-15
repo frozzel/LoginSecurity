@@ -62,7 +62,7 @@ function Allinfo(){
     console.log(SetChar);
     console.log(SymbolsCont);
   } if (SetChar.length === (0)){
-    alert('You Must Choose One!!!!')
+    alert('!!!!You Must Choose One!!!!')
     Allinfo()
     return false
   }

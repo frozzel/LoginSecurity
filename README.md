@@ -18,19 +18,22 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Download content folder enjoy!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
+![Screen Shot](assets/images/03-javascript-homework-demo.png)
+    
 ## Credits
+Dennis Hickox ![Github](https://github.com/frozzel)
+
+Add Popups: ![W3schools]https://www.w3schools.com/js/js_popup.asp
+Onclick: ![W3schools]https://www.w3schools.com/jsref/event_onclick.asp
+Symbols: ![Fatherprada]https://fatherprada.com/info/49-keyboard-symbols-list-and-shortcuts/
+Call Function:  ![W3schools]https://www.w3schools.com/Js/js_function_call.asp
+For Statement: ![W3schools]https://www.w3schools.com/jsref/jsref_for.asp
+Random Numbers: ![W3schools]https://www.w3schools.com/JS/js_random.asp
+Remove Commas and Space: ![Tutorialspoint]https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript
 
 
 
