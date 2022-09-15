@@ -34,7 +34,6 @@ function CharLength(){
 }
 
 function Allinfo(){
-  //Numbers = confirm('Do you want to use numbers?')
   if (confirm('Do you want to use numbers?')){
     Numbers=true;
     SetChar= SetChar.concat(NumbArray)
@@ -45,22 +44,21 @@ function Allinfo(){
     SetChar=SetChar.concat(UpArray)
     console.log(SetChar)
     console.log(UpperCase)
+  } if (confirm('Do you want to us Upper Case Letters?')){
+    LowCase=true;
+    SetChar=SetChar.concat(LowArray);
+    console.log(SetChar);
+    console.log(LowCase)
+  } if (confirm('Would you like to add symbols too? They Add more security!')){
+    SymbolsCont=true;
+    SetChar=SetChar.concat(SymbolsArray);
+    console.log(SetChar);
+    console.log(SymbolsCont);
   }
-  return
+  // return
   
 
  } 
-
- ///////////////////Add old needs added out of time :(  use new if else ^^^^^^^////////////////////
-//   if {
-//   UpperCase = confirm('Do you want to us Upper Case Letters?')
-//   console.log(UpperCase)
-//   LowCase = confirm('Do you want to use Lower Case Letters?')
-//   console.log(LowCase)
-//   SymbolsCont = confirm('Would you like to add symbols too? They Add more security!')
-//   console.log(SymbolsCont)
-// }
-//}
 
 function generatePassword(){
   CharLength()
