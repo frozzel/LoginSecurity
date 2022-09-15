@@ -10,6 +10,8 @@ var LowCase
 var SymbolsCont
 var SetChar= []
 var genpass=[]
+var password
+var Reset;
 
 console.log(PassLength)
 console.log(Numbers)
@@ -25,16 +27,17 @@ NumbArray =[0,1, 2, 3, 4, 5, 6, 7, 8, 9];
 UpArray =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 LowArray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-//////////////////////////////////////////////Funtion////////////////////////////
+//////////////////////////////////////////////Function////////////////////////////
+
 function CharLength(){
-  PassLength = prompt('How long do you want your password? 8-128')
-  if (PassLength < 7 || PassLength > 128) {
-    alert('Please Insert a proper Length')
-    CharLength();
-  return false;
-  }
+  PassLength= prompt('How long do you want your password? 8-128')
+  if (PassLength < 7 || PassLength > 128){
+    alert('Please Insert a propper Length')
+    CharLength()
+    return false;
+    
+  } 
   console.log(PassLength)
-  
 }
 
 function Allinfo(){
@@ -58,15 +61,33 @@ function Allinfo(){
     SetChar=SetChar.concat(SymbolsArray);
     console.log(SetChar);
     console.log(SymbolsCont);
+  } if (SetChar.length === (0)){
+    alert('You Must Choose One!!!!')
+    Allinfo()
+    return false
   }
-    RanDumb()
+  
+  
  } 
+
+ function ResetPass(){
+  
+  PassLength= undefined
+  Numbers= true
+  UpperCase= true
+  LowCase= true
+  SymbolsCont= true
+  SetChar= [];
+  genpass=[];
+  password= undefined;
+ 
+ }
 
 function generatePassword(){
   CharLength()
   Allinfo()
-  CharLength= PassLength
-  Allinfo= SetChar
+  RanDumb()
+  console.log(password)
   console.log(PassLength)
   console.log(SetChar)
 }
@@ -74,26 +95,21 @@ function generatePassword(){
 
 function RanDumb (){
   for (var i =0; i < PassLength; i++){
-    genpass.push(SetChar[Math.floor(Math.random()*SetChar.length)])
+    genpass.push(SetChar[Math.floor(Math.random()*SetChar.length)]);
+    password= genpass.toString("").replaceAll(",", " ");
   }
   console.log(genpass)
+  console.log(password)
 }
-
-
-
-
-
-
-
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  ResetPass()
 }
 
 // Add event listener to generate button
