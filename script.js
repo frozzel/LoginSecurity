@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-///////////////////////////////////////////Global Varibles/////////////////
+///////////////////////////////////////////Global Varibles/////////////////////////////////////////////////////////////////////
 var generatePassword
 var PassLength
 var Numbers
@@ -20,15 +20,17 @@ console.log(LowCase)
 console.log(SymbolsCont)
 console.log(SetChar)
 
-////// ///////////////////////////////////Character Arrays///////////////////////
+////// ///////////////////////////////////Character Arrays//////////////////////////////////////////////////////////////
+/////////////////Ref-----Symbols:https://fatherprada.com/info/49-keyboard-symbols-list-and-shortcuts ////////////////////
 
 SymbolsArray =["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"]
 NumbArray =[0,1, 2, 3, 4, 5, 6, 7, 8, 9];
 UpArray =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 LowArray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-//////////////////////////////////////////////Function////////////////////////////
-
+//////////////////////////////////////////////Function///////////////////////////////////////////////////////////////
+///////////Add Popups: ![W3schools]https://www.w3schools.com/js/js_popup.asp ////////////////////////////////////////
+///////////////////Call Function:  ![W3schools]https://www.w3schools.com/Js/js_function_call.asp  ////////////////////
 function CharLength(){
   PassLength= prompt('How long do you want your password? 8-128')
   if (PassLength < 7 || PassLength > 128){
@@ -62,7 +64,7 @@ function Allinfo(){
     console.log(SetChar);
     console.log(SymbolsCont);
   } if (SetChar.length === (0)){
-    alert('You Must Choose One!!!!')
+    alert('!!!!You Must Choose One!!!!')
     Allinfo()
     return false
   }
@@ -91,7 +93,10 @@ function generatePassword(){
   console.log(PassLength)
   console.log(SetChar)
 }
-////////////////////////////////////////Logic//////////////////////////////
+////////////////////////////////////////Logic////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////For Statement: ![W3schools]https://www.w3schools.com/jsref/jsref_for.asp ///////////////////////////////////////////////////////////
+///////////////////Random Numbers: ![W3schools]https://www.w3schools.com/JS/js_random.asp /////////////////////////////////////////////////////////////
+///////////////////Remove Commas and Space: ![Tutorialspoint]https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript ////////////
 
 function RanDumb (){
   for (var i =0; i < PassLength; i++){
@@ -113,4 +118,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+//////////Onclick: ![W3schools]https://www.w3schools.com/jsref/event_onclick.asp ////////////////////////////////////////////////////////////////////
 generateBtn.addEventListener("click", writePassword);
